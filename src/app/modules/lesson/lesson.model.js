@@ -1,24 +1,27 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const LessonSchema = new Schema(
   {
-    lessonName: {
+    name: {
       type: String,
       required: true,
     },
-    lessonNumber: {
+    number: {
       type: Number,
       required: true,
       unique: true,
+      index: true,
     },
     vocabularyCount: {
       type: Number,
-      default: 0, // Automatically starts at 0
+      default: 0,
     },
   },
   {
-    timestamps: true, // Automatically adds createdAt and updatedAt fields
+    timestamps: true,
   }
 );
 
-module.exports = model("Lesson", LessonSchema);
+const Lesson = model("Lesson", LessonSchema);
+
+module.exports = Lesson;
