@@ -1,6 +1,7 @@
 const User = require("./user.model");
 
 const creatUserIntoDB = async (payload) => {
+ 
   const result = await User.create(payload);
   return result;
 };

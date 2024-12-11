@@ -1,4 +1,5 @@
 const config = require("../config");
+const AppError = require("../error/AppError");
 const handleCastError = require("../error/handleCastError");
 const handleDuplicateError = require("../error/handleDuplicateError");
 const handleValidationError = require("../error/handleValidationError");
