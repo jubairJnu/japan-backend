@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { UserRouters } = require("../modules/user/user.routes");
 const { LessonRouters } = require("../modules/lesson/lesson.routes");
+const { VocabRouters } = require("../modules/vocab/vocab.routes");
 
 const router = Router();
 
@@ -12,6 +13,10 @@ const moduleRoutes = [
   {
     path: "/lessons",
     route: LessonRouters,
+  },
+  {
+    path: "/vocabs",
+    route: VocabRouters,
   },
 ];
 
