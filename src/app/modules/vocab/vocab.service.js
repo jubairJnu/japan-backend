@@ -10,7 +10,7 @@ const createVocabIntoDB = async (payload, email) => {
 // get all
 
 const getAllVocabFromDB = async (lesson) => {
-  const query = lesson ? { lessonNo: new RegExp(lesson, "i") } : {};
+  const query = lesson ? { lessonNo: Number(lesson) } : {};
 
   const result = await Vocabulary.find(query);
   return result;
