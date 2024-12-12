@@ -4,6 +4,7 @@ const handleCastError = require("../error/handleCastError");
 const handleDuplicateError = require("../error/handleDuplicateError");
 const handleValidationError = require("../error/handleValidationError");
 
+// eslint-disable-next-line no-unused-vars
 const globalErrorHandler = (err, req, res, next) => {
   // console.log("Error:", err);
 

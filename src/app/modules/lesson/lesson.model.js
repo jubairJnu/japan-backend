@@ -10,9 +10,8 @@ const LessonSchema = new Schema(
       type: Number,
       required: true,
       unique: true,
-      index: true,
     },
-    vocabularyCount: {
+    vocabCount: {
       type: Number,
       default: 0,
     },

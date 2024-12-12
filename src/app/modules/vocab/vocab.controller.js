@@ -33,7 +33,7 @@ const updateVocab = catchAsync(async (req, res) => {
   });
 });
 const deleteVocab = catchAsync(async (req, res) => {
-  const { id } = req.user;
+  const { id } = req.params;
   const result = await VocabServices.deleteVocabIntoDB(id);
   sendResponse(res, {
     statusCode: 200,
